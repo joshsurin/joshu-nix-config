@@ -4,7 +4,8 @@
     packages = with pkgs; [
       hello
       zsh
-      spaceship-prompt
+      starship
+			zinit
       fzf
       zoxide
       nvimFlake.packages.${pkgs.system}.default
