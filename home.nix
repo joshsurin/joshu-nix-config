@@ -1,8 +1,6 @@
 { lib, pkgs, ... }:
 let
-  nvimFlake = (import ./nvim-flake.nix {
-    inherit pkgs;
-  }).packages.${pkgs.system}.default;
+  nvimFlake = builtins.getFlake (toString ./nvim-flake.nix);
 in
 {
   home = {
@@ -10,7 +8,7 @@ in
       hello
       zsh
       spaceship-prompt
-      nvimFlake
+      nvimFlake.packages.${pkgs.system}.default
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";
