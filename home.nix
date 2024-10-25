@@ -5,6 +5,7 @@
       hello
       zsh
       starship
+			eza
 			zinit
       fzf
       zoxide
