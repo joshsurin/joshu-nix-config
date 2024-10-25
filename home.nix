@@ -1,11 +1,11 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, nvimFlake, ... }:
 {
   home = {
     packages = with pkgs; [
       hello
       zsh
       spaceship-prompt
-      nvim-flake.packages.${pkgs.system}.default
+      nvimFlake.packages.${pkgs.system}.default
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";

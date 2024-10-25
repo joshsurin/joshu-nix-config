@@ -9,10 +9,10 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	nvim-flake.url = "path:./nvim-flake";
+	nvimFlake.url = "path:./nvim-flake";
     };
 
-    outputs = { nixpkgs, home-manager, nvim-flake, ... }:
+    outputs = { nixpkgs, home-manager, nvimFlake, ... }:
 	let
 	    lib = nixpkgs.lib;
 	    system = "x86_64-linux";
@@ -23,7 +23,7 @@
 		    inherit pkgs;
 		    modules = [ ./home.nix ];
 		    extraSpecialArgs = {
-			inherit nvim-flake;
+			inherit nvimFlake;
 		    };
 		};
 	    };
