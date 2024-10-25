@@ -6,6 +6,8 @@
       zsh
       starship
 			eza
+			fira-code
+			fira-code-symbols
 			zinit
       fzf
       zoxide
