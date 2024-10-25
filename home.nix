@@ -5,6 +5,8 @@
       hello
       zsh
       spaceship-prompt
+      fzf
+      zoxide
       nvimFlake.packages.${pkgs.system}.default
     ];
     username = "joshu";

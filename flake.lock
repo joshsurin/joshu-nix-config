@@ -163,7 +163,7 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "nixpkgs"
@@ -186,7 +186,7 @@
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "hercules-ci-effects",
@@ -263,13 +263,13 @@
         "flake-compat": "flake-compat_2",
         "gitignore": "gitignore",
         "nixpkgs": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "nixpkgs"
         ],
         "nixpkgs-stable": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "nixpkgs"
@@ -292,7 +292,7 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "git-hooks",
@@ -365,7 +365,7 @@
       "inputs": {
         "flake-parts": "flake-parts_2",
         "nixpkgs": [
-          "nvim-flake",
+          "nvimFlake",
           "neovim-flake",
           "neovim-nightly-overlay",
           "nixpkgs"
@@ -867,24 +867,6 @@
         "type": "github"
       }
     },
-    "nvim-flake": {
-      "inputs": {
-        "avante-nvim": "avante-nvim",
-        "flake-utils": "flake-utils",
-        "neovim-flake": "neovim-flake",
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-wEiWKz5ju+6YNatmFUJrox3lmd7R3TLulAwkTxnMk8I=",
-        "path": "./nvim-flake",
-        "type": "path"
-      },
-      "original": {
-        "path": "./nvim-flake",
-        "type": "path"
-      }
-    },
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -1045,6 +1027,24 @@
         "type": "github"
       }
     },
+    "nvimFlake": {
+      "inputs": {
+        "avante-nvim": "avante-nvim",
+        "flake-utils": "flake-utils",
+        "neovim-flake": "neovim-flake",
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-wEiWKz5ju+6YNatmFUJrox3lmd7R3TLulAwkTxnMk8I=",
+        "path": "./nvim-flake",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nvim-flake",
+        "type": "path"
+      }
+    },
     "persistence": {
       "flake": false,
       "locked": {
@@ -1097,7 +1097,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nvim-flake": "nvim-flake"
+        "nvimFlake": "nvimFlake"
       }
     },
     "rust-tools": {
