@@ -8,9 +8,11 @@
 	    url = "github:nix-community/home-manager/release-24.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
+
+	nvim-flake.url = "path:./nvim-flake";
     };
 
-    outputs = { nixpkgs, home-manager, ... }:
+    outputs = { nixpkgs, home-manager, nvim-flake, ... }:
 	let
 	    lib = nixpkgs.lib;
 	    system = "x86_64-linux";
