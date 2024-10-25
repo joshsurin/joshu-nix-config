@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 let
     nvimFlake = builtins.getFlake ./nvim-flake.nix;
-    neovimWithConfig = nvimFlake.packages.${pkgs.system}.default;
+    neovimWithConfig = nvimFlake.packages.${"pkgs.system"}.default;
 {
     home = {
 	packages = with pkgs; [
