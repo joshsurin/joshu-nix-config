@@ -3,6 +3,8 @@
     home = {
 	packages = with pkgs; [
 	    hello
+	    zsh
+	    spaceship-prompt
 	];
 
 	username = "joshu";
