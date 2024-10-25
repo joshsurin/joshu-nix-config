@@ -1,6 +1,8 @@
 { lib, pkgs, ... }:
 let
-  nvimFlake = builtins.getFlake (./nvim-flake.nix + "/#packages.${pkgs.system}.default");
+  nvimFlake = (import ./nvim-flake.nix {
+    inherit pkgs;
+  }).packages.${pkgs.system}.default;
 in
 {
   home = {
@@ -10,10 +12,8 @@ in
       spaceship-prompt
       nvimFlake
     ];
-
     username = "joshu";
     homeDirectory = "/home/joshu";
-
     stateVersion = "24.05";
   };
 }
