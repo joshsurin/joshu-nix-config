@@ -10,7 +10,8 @@
       fzf
       zoxide
       nvimFlake.packages.${pkgs.system}.default
-			(nerdfonts.override { fonts = [ "FiraCode "]; })
+			fira-code
+			fira-code-nerdfont
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";
