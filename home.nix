@@ -4,6 +4,7 @@
     packages = with pkgs; [
       hello
       zsh
+			aria2
       starship
 			eza
 			zinit
