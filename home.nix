@@ -13,6 +13,9 @@
       nvimFlake.packages.${pkgs.system}.default
 			fira-code
 			fira-code-nerdfont
+
+			pnpm
+			nodejs_22
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";
