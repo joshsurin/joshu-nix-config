@@ -15,7 +15,7 @@
 			fira-code-nerdfont
 
 			pnpm
-			nodejs_22
+			nodejs_18
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";
