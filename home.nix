@@ -10,6 +10,7 @@
 			zinit
       fzf
       zoxide
+			ripgrep
       nvimFlake.packages.${pkgs.system}.default
 			fira-code
 			fira-code-nerdfont
