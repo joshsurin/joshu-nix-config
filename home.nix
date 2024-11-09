@@ -5,6 +5,7 @@
       hello
       zsh
 			aria2
+			xclip
       starship
 			eza
 			zinit
