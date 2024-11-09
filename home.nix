@@ -18,6 +18,8 @@
 
 			pnpm
 			nodejs_18
+
+			rustup
     ];
     username = "joshu";
     homeDirectory = "/home/joshu";
