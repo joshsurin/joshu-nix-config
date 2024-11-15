@@ -1035,14 +1035,19 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-wEiWKz5ju+6YNatmFUJrox3lmd7R3TLulAwkTxnMk8I=",
-        "path": "./nvim-flake",
-        "type": "path"
+        "dir": "nvim-flake",
+        "lastModified": 1731643744,
+        "narHash": "sha256-w8/9CWVcDDxf3eB0m9w1v5H5tvFZO3Inh798pdWVv1c=",
+        "ref": "refs/heads/macos",
+        "rev": "8013647afda34c2dacacb9a214f229ee7b8a7188",
+        "revCount": 38,
+        "type": "git",
+        "url": "file:///Users/joshuasurin/s/joshu-nix-config?dir=nvim-flake"
       },
       "original": {
-        "path": "./nvim-flake",
-        "type": "path"
+        "dir": "nvim-flake",
+        "type": "git",
+        "url": "file:///Users/joshuasurin/s/joshu-nix-config?dir=nvim-flake"
       }
     },
     "persistence": {
