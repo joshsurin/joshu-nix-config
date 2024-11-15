@@ -9,13 +9,13 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	nvimFlake.url = "path:./nvim-flake";
-    };
+	nvimFlake.url = "/Users/joshuasurin/s/joshu-nix-config/nvim-flake";
+};
 
     outputs = { nixpkgs, home-manager, nvimFlake, ... }:
 	let
 	    lib = nixpkgs.lib;
-	    system = "x86_64-linux";
+	    system = "aarch64-darwin";
 	    pkgs = import nixpkgs { inherit system; };
 	in {
 	    homeConfigurations = {

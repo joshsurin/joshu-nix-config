@@ -19,36 +19,6 @@
         pkgs = nixpkgs.legacyPackages.${system};
         defaults = {
           vim = {
-            configRC = ''
-              imap ww <esc>
-              let g:clipboard = {
-        \'name': 'WslClipboard',
-        \'copy': {
-            \'+': 'clip.exe',
-            \'*': 'clip.exe',
-        \},
-        \'paste': {
-            \'+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-            \'*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        \},
-        \'cache_enabled': 0,
-        \}
-        " New vim options
-        set autoindent
-        set noexpandtab
-        set tabstop=2
-        set shiftwidth=2
-        set relativenumber
-
-	" Key Mappings
-	xnoremap <leader>p "_dP
-	vnoremap J :m '>+1<CR>gv=gv
-	vnoremap K :m '<-2<CR>gv=gv
-
-	" Remap Ctrl+Shift+V to Ctrl+V for visual block mode
-	nmap <C-I> <C-V>
-	vmap <C-I> <C-V>
-            '';
             customPlugins = with pkgs.vimPlugins; [
                 vim-prettier
 								nvim-colorizer-lua

@@ -13,16 +13,18 @@
       zoxide
 			ripgrep
       nvimFlake.packages.${pkgs.system}.default
+      fontconfig
 			fira-code
 			fira-code-nerdfont
+      alacritty
 
 			pnpm
 			nodejs_18
 
 			rustup
     ];
-    username = "joshu";
-    homeDirectory = "/home/joshu";
+    username = "joshuasurin";
+    homeDirectory = "/Users/joshuasurin";
     stateVersion = "24.05";
   };
 
