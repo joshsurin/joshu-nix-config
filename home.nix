@@ -4,24 +4,24 @@
     packages = with pkgs; [
       hello
       zsh
-			aria2
-			xclip
+      aria2
+      xclip
       starship
-			eza
-			zinit
+      eza
+      zinit
       fzf
       zoxide
-			ripgrep
+      ripgrep
       nvimFlake.packages.${pkgs.system}.default
       fontconfig
-			fira-code
-			fira-code-nerdfont
+      fira-code
+      fira-code-nerdfont
       alacritty
 
-			pnpm
-			nodejs_18
+      pnpm
+      nodejs_18
 
-			rustup
+      rustup
     ];
     username = "joshuasurin";
     homeDirectory = "/Users/joshuasurin";
