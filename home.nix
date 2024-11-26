@@ -3,6 +3,7 @@
   home = {
     packages = with pkgs; [
       hello
+      bat
       zsh
       aria2
       xclip
@@ -17,9 +18,11 @@
       fira-code
       fira-code-nerdfont
       alacritty
+      k9s
+      kubectx
 
+      awscli2
       pnpm
-      nodejs_18
 
       rustup
     ];
