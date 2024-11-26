@@ -7,25 +7,25 @@
     neovim-flake = {
       url = "github:josephsurin/neovim-flake";
     };
-    avante-nvim = {
-      url = "github:yetone/avante.nvim";
-      flake = false;
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs, flake-utils, neovim-flake, avante-nvim }:
+  outputs = inputs @ { self, nixpkgs, flake-utils, neovim-flake }:
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
         defaults = {
           vim = {
+            configRC = ''
+                " New vim options
+                vim.opt.autoindent = true
+                vim.opt.expandtab = false
+                vim.opt.tabstop = 2
+                vim.opt.shiftwidth = 2
+                vim.opt.relativenumber = true
+            '';
             customPlugins = with pkgs.vimPlugins; [
                 vim-prettier
 								nvim-colorizer-lua
-                (pkgs.vimUtils.buildVimPlugin {
-                  name = "avante-nvim";
-                  src = avante-nvim;
-                })
             ];
             lsp = {
               enable = true;
