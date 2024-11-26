@@ -22,7 +22,7 @@
       kubectx
 
       pnpm
-      awscli1
+      awscli2
 
       rustup
     ];
