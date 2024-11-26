@@ -16,12 +16,12 @@
         defaults = {
           vim = {
             configRC = ''
-                " New vim options
-                vim.opt.autoindent = true
-                vim.opt.expandtab = false
-                vim.opt.tabstop = 2
-                vim.opt.shiftwidth = 2
-                vim.opt.relativenumber = true
+                " New set ons
+                set autoindent = true
+                set expandtab = false
+                set tabstop = 2
+                set shiftwidth = 2
+                set relativenumber = true
             '';
             customPlugins = with pkgs.vimPlugins; [
                 vim-prettier
