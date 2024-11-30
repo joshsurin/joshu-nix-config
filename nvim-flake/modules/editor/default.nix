@@ -20,6 +20,7 @@ with lib; {
     ];
 
     vim.configRC = /* vim */ ''
+      set relativenumber
       let g:VM_maps = {}
       let g:VM_maps['Find Under']         = '<C-d>'
       let g:VM_maps['Find Subword Under'] = '<C-d>'

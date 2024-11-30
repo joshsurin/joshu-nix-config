@@ -306,8 +306,6 @@
           inherit (pkgs) neovim-nightly neovimPlugins;
         };
 
-        inherit neovimBuilder;
-
         nixosModules.hm = {
           imports = [
             ./lib/hm.nix
