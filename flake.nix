@@ -40,10 +40,10 @@
             homeConfigurations = {
                 joshu = home-manager.lib.homeManagerConfiguration {
                     inherit pkgs;
-                    modules = [ ./home.nix ];
-                    extraSpecialArgs = {
-                        inherit nvimFlake;
-                    };
+                    modules = [ 
+                      ./home.nix
+                      nvimFlake.nixosModules.${system}.hm
+                    ];
                 };
             };
         };
