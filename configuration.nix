@@ -6,6 +6,7 @@
     enable = true;
     defaultUser = "joshu";
   };
+  disabledModules = [ "modules/wsl-conf.nix" ];
 
   nix = {
     package = pkgs.nixFlakes;
