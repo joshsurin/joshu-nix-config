@@ -1,4 +1,7 @@
 { config, pkgs, ... }: {
+  imports = [
+    <nixos-wsl/modules>
+  ];
   wsl = {
     enable = true;
     defaultUser = "joshu";
