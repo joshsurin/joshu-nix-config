@@ -6,7 +6,6 @@
 	username = "joshu";
 	homeDirectory = "/home/joshu";
 	stateVersion = "24.05";
-	shell = pkgs.zsh;
 	packages = with pkgs; [
 		hello
 		zsh
