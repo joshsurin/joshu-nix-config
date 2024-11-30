@@ -6,6 +6,7 @@
 	username = "joshu";
 	homeDirectory = "/home/joshu";
 	stateVersion = "24.05";
+	shell = pkgs.zsh;
 	packages = with pkgs; [
 		hello
 		zsh
@@ -44,10 +45,4 @@
 
   services = {
   };
-
-  home.language.base = "en_US.UTF-8";
-
-  home.stateVersion = "24.05";
-
-  home.shell = pkgs.zsh;
 }
