@@ -1,4 +1,4 @@
-{ lib, pkgs, nvimFlake, ... }:
+{ lib, pkgs, ... }:
 {
 	programs.home-manager.enable = true;
 	fonts.fontconfig.enable = true;
@@ -7,6 +7,7 @@
 	homeDirectory = "/home/joshu";
 	stateVersion = "24.05";
 	packages = with pkgs; [
+		cowsay
 		hello
 		zsh
 		aria2
@@ -17,7 +18,6 @@
 		fzf
 		zoxide
 		ripgrep
-		nvimFlake.packages.${pkgs.system}.default
 		fira-code
 		fira-code-nerdfont
 
@@ -29,6 +29,7 @@
 	};
 
   programs = {
+    my-neovim.enable = true;
     zsh = {
       enable = true;
       enableCompletion = true;

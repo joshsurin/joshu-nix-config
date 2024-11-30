@@ -1,4 +1,5 @@
-{ config, pkgs, lib, ... }: {
+{ inputs, outputs, config, pkgs, lib, ... }: 
+{
   wsl = {
     enable = true;
     defaultUser = "joshu";

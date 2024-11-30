@@ -12,8 +12,9 @@
         };
         nvimFlake.url = "path:./nvim-flake";
     };
-    outputs = { nixpkgs, home-manager, nvimFlake, nixos-wsl, ... } @ inputs:
+    outputs = { self, nixpkgs, home-manager, nvimFlake, nixos-wsl, ... } @ inputs:
         let
+            inherit (self) outputs;
             lib = nixpkgs.lib.nixosSystem;
             system = "x86_64-linux";
             pkgs = import nixpkgs { inherit system; };
@@ -21,19 +22,11 @@
             nixosConfigurations = {
                 joshu = nixpkgs.lib.nixosSystem {
                     inherit system;
+                    specialArgs = {inherit inputs outputs;};
                     modules = [
                         nixos-wsl.nixosModules.wsl
                         ./configuration.nix
-                        home-manager.nixosModules.home-manager
-                        {
-                            home-manager.useGlobalPkgs = true;
-                            home-manager.useUserPackages = true;
-                            home-manager.users.joshu = import ./home.nix;
-                        }
                     ];
-                    specialArgs = {
-                        inherit inputs nvimFlake;
-                    };
                 };
             };
 
@@ -41,8 +34,8 @@
                 joshu = home-manager.lib.homeManagerConfiguration {
                     inherit pkgs;
                     modules = [ 
-                      ./home.nix
-                      nvimFlake.nixosModules.${system}.hm
+                        nvimFlake.nixosModules.${system}.hm
+                        ./home.nix
                     ];
                 };
             };
