@@ -10,8 +10,9 @@
 	    url = "github:nix-community/NixOS-WSL";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
+	nvimFlake.url = "path:./nvim-flake";
     };
-    outputs = { nixpkgs, home-manager, nixos-wsl, ... }:
+    outputs = { nixpkgs, home-manager, nvimFlake, nixos-wsl, ... }:
         let
             system = "x86_64-linux";
             pkgs = import nixpkgs { inherit system; };
@@ -27,6 +28,9 @@
                             home-manager.useGlobalPkgs = true;
                             home-manager.useUserPackages = true;
                             home-manager.users.joshu = import ./home.nix;
+			    extraSpecialArgs = {
+				inherit nvimFlake;
+			    };
                         }
                     ];
                 };
