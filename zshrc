@@ -1,4 +1,4 @@
-ZINIT_HOME="/zinit/zinit.git"
+ZINIT_HOME="$HOME/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -85,5 +85,5 @@ alias kgp="kubectl get pod"
 alias klp="kubectl logs -f"
 alias kdp="kubectl delete pod"
 alias code="code-insiders"
-alias ls="eza --color=always --long --no-filesize --icons=always --group-directories-first --no-time --no-user --no-permissions"
-alias lsa="eza --color=always --long -hal --icons=always --group-directories-first"
+alias ls="eza --color=always --no-filesize --icons=always --group-directories-first --no-time --no-user --no-permissions"
+alias lsa="eza --color=always -hal --icons=always --group-directories-first"

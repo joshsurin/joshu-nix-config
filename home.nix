@@ -11,8 +11,8 @@
 		".config/starship.toml".source = ./starship.toml;
 	};
 	packages = with pkgs; [
-		cowsay
 		hello
+    bat
 		zsh
 		aria2
 		xclip
