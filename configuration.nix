@@ -1,12 +1,12 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
   imports = [
     <nixos-wsl/modules>
   ];
   wsl = {
     enable = true;
     defaultUser = "joshu";
+    wslConf = lib.mkForce {};
   };
-  disabledModules = [ "modules/wsl-conf.nix" ];
 
   nix = {
     package = pkgs.nixFlakes;
