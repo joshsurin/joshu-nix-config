@@ -28,9 +28,6 @@
                             home-manager.useGlobalPkgs = true;
                             home-manager.useUserPackages = true;
                             home-manager.users.joshu = import ./home.nix;
-			    extraSpecialArgs = {
-				inherit nvimFlake;
-			    };
                         }
                     ];
                 };
@@ -40,6 +37,9 @@
                 joshu = home-manager.lib.homeManagerConfiguration {
                     inherit pkgs;
                     modules = [ ./home.nix ];
+		    extraSpecialArgs = {
+			inherit nvimFlake;
+		    };
                 };
             };
         };
