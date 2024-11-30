@@ -1,0 +1,52 @@
+# little hack using $fill to get kubernetes context to the right on the top line
+format = """
+$os\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$aws\
+$sudo\
+$fill\
+$kubernetes\
+$line_break\
+$character"""
+
+# right_format = """$kubernetes"""
+
+[fill]
+symbol = ' '
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = ''
+
+[aws]
+format = '[$symbol$profile]($style) '
+style = 'bold blue'
+symbol = '🅰 '
+
+[kubernetes]
+disabled = false
+format = '[$context]($style):$namespace'
+[[kubernetes.contexts]]
+context_pattern = "twist-preregulated"
+context_alias = "preregulated"
+style = "bold red"
+[[kubernetes.contexts]]
+context_pattern = "twist-sweeps"
+context_alias = "sweeps"
+style = "bold purple"
+[[kubernetes.contexts]]
+context_pattern = "twist-staging"
+context_alias = "staging"
+style = "bold yellow"
+[[kubernetes.contexts]]
+context_pattern = "twist-dev"
+context_alias = "dev"
+style = "bold yellow"
+[[kubernetes.contexts]]
+context_pattern = "docker-desktop"
+context_alias = "local"
+style = "bold green"

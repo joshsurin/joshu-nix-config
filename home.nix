@@ -6,6 +6,10 @@
 	username = "joshu";
 	homeDirectory = "/home/joshu";
 	stateVersion = "24.05";
+	file = {
+		".zshrc".source = ./zshrc;
+		".config/starship.toml".source = ./starship.toml;
+	};
 	packages = with pkgs; [
 		cowsay
 		hello
@@ -34,13 +38,14 @@
       enable = true;
       enableCompletion = true;
     };
-
+		starship = {
+			enable = true;
+		};
     git = {
       enable = true;
       userName = "joshsurin";
       userEmail = "joshua.surin@gmail.com";
     };
-
   };
 
   services = {
