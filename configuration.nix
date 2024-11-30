@@ -12,12 +12,10 @@
     '';
   };
 
-  users.users.joshu = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
-  };
+  # users.users.joshu = {
+  #   isNormalUser = true;
+  #   extraGroups = [ "wheel" ];
+  # };
 
-  programs.zsh.enable = true;
   system.stateVersion = "24.05";
 }

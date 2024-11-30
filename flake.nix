@@ -1,5 +1,5 @@
 {
-    description = "Joshu WSL-NixOS Config";
+    description = "Joshu Nix Config";
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-24.05";
         home-manager = {
@@ -10,17 +10,21 @@
             url = "github:nix-community/NixOS-WSL";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nix-darwin = {
+            url = "github:LnL7/nix-darwin";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         nvimFlake.url = "path:./nvim-flake";
     };
-    outputs = { self, nixpkgs, home-manager, nvimFlake, nixos-wsl, ... } @ inputs:
+    outputs = { self, nixpkgs, home-manager, nvimFlake, nixos-wsl, nix-darwin, ... } @ inputs:
         let
             inherit (self) outputs;
             lib = nixpkgs.lib.nixosSystem;
             system = "x86_64-linux";
-            pkgs = import nixpkgs { inherit system; };
+            darwinSystem = "aarch64-darwin";
         in {
             nixosConfigurations = {
-                joshu = nixpkgs.lib.nixosSystem {
+                joshu-wsl = nixpkgs.lib.nixosSystem {
                     inherit system;
                     specialArgs = {inherit inputs outputs;};
                     modules = [
@@ -30,10 +34,27 @@
                 };
             };
 
+            darwinConfigurations = {
+                joshu-mac = nix-darwin.lib.darwinSystem {
+                    inherit darwinSystem;
+                    modules = [
+                        ./darwin-configuration.nix
+                    ];
+                };
+            };
+
             homeConfigurations = {
-                joshu = home-manager.lib.homeManagerConfiguration {
-                    inherit pkgs;
+                joshu-wsl = home-manager.lib.homeManagerConfiguration {
+                    pkgs = nixpkgs.legacyPackages.${system};
                     modules = [ 
+                        nvimFlake.nixosModules.${system}.hm
+                        ./home.nix
+                    ];
+                };
+
+                joshu-mac = home-manager.lib.homeManagerConfiguration {
+                    pkgs = nixpkgs.legacyPackages.${darwinSystem};
+                    modules = [
                         nvimFlake.nixosModules.${system}.hm
                         ./home.nix
                     ];
