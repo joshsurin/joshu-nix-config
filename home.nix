@@ -1,30 +1,72 @@
-{ lib, pkgs, nvimFlake, ... }:
+{ lib, pkgs, nvimFlake, ... } @ args:
+let
+  systemType = args.extraSpecialArgs.systemType or "unknown";
+  username = if systemType == "wsl" then "joshu" else "joshuasurin";
+  homeDirectory = if systemType == "wsl" then "/home/joshu" else "/Users/joshuasurin";
+in
 {
-  home = {
-    packages = with pkgs; [
+	programs.home-manager.enable = true;
+	fonts.fontconfig.enable = true;
+	home = {
+	username = username;
+	homeDirectory = homeDirectory;
+	stateVersion = "24.05";
+	file = {
+		".zshrc".source = ./zshrc;
+		".config/starship.toml".source = ./starship.toml;
+	};
+	packages = with pkgs; [
+      # system stuff
       hello
+      bat
       zsh
-			aria2
-			xclip
+      aria2
+      xclip
       starship
-			eza
-			zinit
+      eza
+      zinit
       fzf
       zoxide
-			ripgrep
+      ripgrep
+      fontconfig
+      fira-code
+      fira-code-nerdfont
+      gh
       nvimFlake.packages.${pkgs.system}.default
-			fira-code
-			fira-code-nerdfont
 
-			pnpm
-			nodejs_18
+      # devops stuff
+      k9s
+      kubectx
+      awscli2
+      kubectl
 
-			rustup
-    ];
-    username = "joshu";
-    homeDirectory = "/home/joshu";
-    stateVersion = "24.05";
+      # languages stuff
+      haskellPackages.haskell-language-server
+      ghc
+
+      pnpm
+      nodejs_18
+      eslint_d
+
+      rustup
+		];
+	};
+
+  programs = {
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+    };
+		starship = {
+			enable = true;
+		};
+    git = {
+      enable = true;
+      userName = "joshsurin";
+      userEmail = "joshua.surin@gmail.com";
+    };
   };
 
-	fonts.fontconfig.enable = true;
+  services = {
+  };
 }
