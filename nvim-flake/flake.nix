@@ -25,6 +25,8 @@
             '';
             customPlugins = with pkgs.vimPlugins; [
                 vim-prettier
+                null-ls-nvim
+                eslint-nvim
 								nvim-colorizer-lua
             ];
             lsp = {
@@ -39,6 +41,8 @@
                 typescript = true;
                 html = true;
                 tailwindcss = true;
+                javascript = true;
+                eslint = true;
               };
             };
           };

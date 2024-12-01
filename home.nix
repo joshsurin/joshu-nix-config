@@ -20,10 +20,10 @@
       alacritty
       k9s
       kubectx
-
+      gh
+      eslint_d
       pnpm
       awscli2
-
       rustup
     ];
     username = "joshuasurin";
