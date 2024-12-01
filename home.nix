@@ -26,6 +26,7 @@
       fontconfig
       fira-code
       fira-code-nerdfont
+      gh
       nvimFlake.packages.${pkgs.system}.default
 
       # devops stuff
