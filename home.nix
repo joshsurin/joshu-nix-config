@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, nvimFlake, ... }:
 {
 	programs.home-manager.enable = true;
 	fonts.fontconfig.enable = true;
@@ -22,8 +22,14 @@
 		fzf
 		zoxide
 		ripgrep
+    fontconfig
 		fira-code
 		fira-code-nerdfont
+    k9s
+    kubectx
+    awscli2
+    kubectl
+    nvimFlake.packages.${pkgs.system}.default
 
 		pnpm
 		nodejs_18

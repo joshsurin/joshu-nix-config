@@ -139,7 +139,7 @@
     # LSP Plugins
     #-------------------------------------
     nvim-lspconfig = {
-      url = "github:neovim/nvim-lspconfig";
+      url = "github:neovim/nvim-lspconfig?rev=01e08d4bf1c35e5126b2ad5209725e4c552289ab";
       flake = false;
     };
     lsp-status = {

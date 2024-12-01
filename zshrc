@@ -64,7 +64,7 @@ alias assume=". assume"
 
 export FZF_DEFAULT_OPTS='--multi --no-height --extended --bind ctrl-space:toggle,enter:accept-non-empty'
 
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
@@ -87,3 +87,10 @@ alias kdp="kubectl delete pod"
 alias code="code-insiders"
 alias ls="eza --color=always --no-filesize --icons=always --group-directories-first --no-time --no-user --no-permissions"
 alias lsa="eza --color=always -hal --icons=always --group-directories-first"
+
+# Nix/home-manager
+alias rnixwsl="sudo nixos-rebuild switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure"
+alias rnixmac="sudo nixos-rebuild switch --flake '/home/joshu/joshu-nix-config/#joshu-mac' --impure"
+alias hmswsl="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure"
+alias hmsmac="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-mac' --impure"
+alias nvimz="nvim '/home/joshu/joshu-nix-config/zshrc'"

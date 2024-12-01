@@ -47,9 +47,11 @@
                 joshu-wsl = home-manager.lib.homeManagerConfiguration {
                     pkgs = nixpkgs.legacyPackages.${system};
                     modules = [ 
-                        nvimFlake.nixosModules.${system}.hm
                         ./home.nix
                     ];
+                    extraSpecialArgs = {
+                        inherit nvimFlake;
+                    };
                 };
 
                 joshu-mac = home-manager.lib.homeManagerConfiguration {
