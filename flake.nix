@@ -36,7 +36,7 @@
 
             darwinConfigurations = {
                 joshu-mac = nix-darwin.lib.darwinSystem {
-                    inherit darwinSystem;
+                    system = darwinSystem;
                     modules = [
                         ./darwin-configuration.nix
                     ];
@@ -51,6 +51,7 @@
                     ];
                     extraSpecialArgs = {
                         inherit nvimFlake;
+                        systemType = "wsl";
                     };
                 };
 
@@ -61,6 +62,7 @@
                     ];
                     extraSpecialArgs = {
                         inherit nvimFlake;
+                        systemType = "mac";
                     };
                 };
             };

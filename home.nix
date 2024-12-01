@@ -1,10 +1,15 @@
-{ lib, pkgs, nvimFlake, ... }:
+{ lib, pkgs, nvimFlake, ... } @ args:
+let
+  systemType = args.extraSpecialArgs.systemType or "unknown";
+  username = if systemType == "wsl" then "joshu" else "joshuasurin";
+  homeDirectory = if systemType == "wsl" then "/home/joshu" else "/Users/joshuasurin";
+in
 {
 	programs.home-manager.enable = true;
 	fonts.fontconfig.enable = true;
 	home = {
-	username = "joshu";
-	homeDirectory = "/home/joshu";
+	username = username;
+	homeDirectory = homeDirectory;
 	stateVersion = "24.05";
 	file = {
 		".zshrc".source = ./zshrc;
@@ -41,6 +46,7 @@
 
       pnpm
       nodejs_18
+      eslint_d
 
       rustup
 		];
