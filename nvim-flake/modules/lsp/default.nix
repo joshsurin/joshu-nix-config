@@ -36,6 +36,11 @@ in {
         default = false;
         description = "Enable Rust LSP Server";
       };
+      haskell = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Enable Haskell LSP Server";
+      };
       go = mkOption {
         type = types.bool;
         default = false;

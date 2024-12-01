@@ -20,8 +20,9 @@ with lib; {
     ];
 
     vim.configRC = /* vim */ ''
-      " set relativenumber
+      set relativenumber
       set shiftwidth=2
+      set nolist
 
       let g:VM_maps = {}
       let g:VM_maps['Find Under']         = '<C-d>'

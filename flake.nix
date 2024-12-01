@@ -57,9 +57,11 @@
                 joshu-mac = home-manager.lib.homeManagerConfiguration {
                     pkgs = nixpkgs.legacyPackages.${darwinSystem};
                     modules = [
-                        nvimFlake.nixosModules.${system}.hm
                         ./home.nix
                     ];
+                    extraSpecialArgs = {
+                        inherit nvimFlake;
+                    };
                 };
             };
         };

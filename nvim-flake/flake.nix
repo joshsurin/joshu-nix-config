@@ -287,6 +287,7 @@
                 typescript = true;
                 html = true;
                 tailwindcss = true;
+                haskell = true;
               };
             };
           };
