@@ -94,3 +94,9 @@ alias rnixmac="sudo nixos-rebuild switch --flake '/Users/joshuasurin/s/joshu-nix
 alias hmswsl="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure"
 alias hmsmac="home-manager switch --flake '/Users/joshuasurin/s/joshu-nix-config/#joshu-mac' --impure"
 alias nvimz="nvim '/home/joshu/joshu-nix-config/zshrc'"
+
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

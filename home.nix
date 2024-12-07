@@ -42,10 +42,13 @@ in
 
       # languages stuff
       haskellPackages.haskell-language-server
+      haskellPackages.cabal-install
       ghc
 
+      # yarn
       pnpm
       nodejs_18
+      # nodejs_20
       eslint_d
 
       rustup
