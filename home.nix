@@ -13,7 +13,7 @@ in
 	stateVersion = "24.05";
 	file = {
 		".zshrc".source = ./zshrc;
-		".config/starship.toml".source = ./starship.toml;
+		".config/starship.toml".source = ./starship/tokyonight.toml;
 	};
 	packages = with pkgs; [
       # system stuff
