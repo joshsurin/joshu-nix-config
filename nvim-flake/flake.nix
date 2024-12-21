@@ -98,6 +98,30 @@
       url = "github:shaunsingh/nord.nvim";
       flake = false;
     };
+    kanagawa = {
+      url = "github:rebelot/kanagawa.nvim";
+      flake = false;
+    };
+    vscode = {
+      url = "github:Mofiqul/vscode.nvim";
+      flake = false;
+    };
+    tokyonight = {
+      url = "github:folke/tokyonight.nvim";
+      flake = false;
+    };
+    everforest = {
+      url = "github:neanias/everforest-nvim";
+      flake = false;
+    };
+    onenord = {
+      url = "github:rmehri01/onenord.nvim";
+      flake = false;
+    };
+    poimandres = {
+      url = "github:olivercederborg/poimandres.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # Editor Plugins

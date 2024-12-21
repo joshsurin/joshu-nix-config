@@ -5,7 +5,17 @@
 }:
 with lib; {
   config = {
-    vim.startPlugins = with pkgs.neovimPlugins; [gruvbox-material nvim-transparent];
+    vim.startPlugins = with pkgs.neovimPlugins; [
+      gruvbox-material
+      nord
+      vscode
+      kanagawa
+      nvim-transparent
+      tokyonight
+      everforest
+      onenord
+      poimandres
+    ];
 
     vim.configRC = /* vim */ ''
       if has('termguicolors')
@@ -39,6 +49,13 @@ with lib; {
         autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
       augroup END
 
+      colorscheme nord
+      colorscheme kanagawa
+      colorscheme vscode
+      colorscheme tokyonight
+      colorscheme everforest
+      colorscheme onenord
+      colorscheme poimandres
       colorscheme gruvbox-material
     '';
 
