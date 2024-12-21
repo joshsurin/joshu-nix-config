@@ -2,7 +2,7 @@
 let
   systemType = args.extraSpecialArgs.systemType or "unknown";
   username = if systemType == "wsl" then "joshu" else "joshuasurin";
-  homeDirectory = if systemType == "wsl" then "/home/joshu" else "/Users/joshuasurin";
+  homeDirectory = if systemType == "wsl" then "/home/joshu" else "/User/joshuasurin";
 in
 {
 	programs.home-manager.enable = true;

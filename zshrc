@@ -26,6 +26,41 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+export TERM="xterm-256color"
+
+# Main highlight colors
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+# Main syntax highlighting
+ZSH_HIGHLIGHT_STYLES[default]='fg=#a0a9cb'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f7768e'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#bb9af7'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#7dcfff'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#7dcfff'
+ZSH_HIGHLIGHT_STYLES[global-alias]='fg=#7dcfff'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#7aa2f7'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#7aa2f7'
+ZSH_HIGHLIGHT_STYLES[command]='fg=#7aa2f7'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#7aa2f7,italic'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#769ff0'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#a3aed2,underline'
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f7768e'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#a3aed2'
+ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#f7768e'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#bb9af7'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#bb9af7'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=#73daca'
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=#73daca'
+ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=#73daca'
+ZSH_HIGHLIGHT_STYLES[assign]='fg=#a0a9cb'
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=#769ff0'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#565f89'
+
 # Keybindings
 # bindkey -e
 # bindkey '^p' history-search-backward
