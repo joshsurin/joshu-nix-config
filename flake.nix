@@ -14,9 +14,22 @@
             url = "github:LnL7/nix-darwin";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        base16.url = "github:SenchoPens/base16.nix";
+        tt-schemes = {
+            url = "github:tinted-theming/schemes";
+            flake = false;
+        };
+        base16-zathura = {
+            url = "github:haozeke/base16-zathura";
+            flake = false;
+        };
+        base16-vim = {
+            url = "github:tinted-theming/base16-vim";
+            flake = false;
+        };
         nvimFlake.url = "path:./nvim-flake";
     };
-    outputs = { self, nixpkgs, home-manager, nvimFlake, nixos-wsl, nix-darwin, ... } @ inputs:
+    outputs = { self, nixpkgs, home-manager, nvimFlake, nixos-wsl, nix-darwin, base16, ... } @ inputs:
         let
             inherit (self) outputs;
             lib = nixpkgs.lib.nixosSystem;
@@ -47,10 +60,14 @@
                 joshu-wsl = home-manager.lib.homeManagerConfiguration {
                     pkgs = nixpkgs.legacyPackages.${system};
                     modules = [ 
+                        base16.homeManagerModule
+                        {
+                            scheme = "${inputs.tt-schemes}/base16/nord.yaml";
+                        }
                         ./home.nix
                     ];
                     extraSpecialArgs = {
-                        inherit nvimFlake;
+                        inherit inputs nvimFlake;
                         systemType = "wsl";
                     };
                 };
@@ -58,10 +75,14 @@
                 joshu-mac = home-manager.lib.homeManagerConfiguration {
                     pkgs = nixpkgs.legacyPackages.${darwinSystem};
                     modules = [
+                        base16.homeManagerModule
+                        {
+                            scheme = "${inputs.tt-schemes}/base16/nord.yaml";
+                        }
                         ./home.nix
                     ];
                     extraSpecialArgs = {
-                        inherit nvimFlake;
+                        inherit inputs nvimFlake;
                         systemType = "mac";
                     };
                 };

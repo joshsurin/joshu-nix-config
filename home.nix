@@ -5,6 +5,9 @@ let
   homeDirectory = if systemType == "wsl" then "/home/joshu" else "/User/joshuasurin";
 in
 {
+  imports = [
+    ./theming.nix
+  ];
 	programs.home-manager.enable = true;
 	fonts.fontconfig.enable = true;
 	home = {

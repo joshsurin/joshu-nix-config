@@ -94,6 +94,10 @@
       url = "github:xiyaowong/nvim-transparent";
       flake = false;
     };
+    nord = {
+      url = "github:shaunsingh/nord.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # Editor Plugins
