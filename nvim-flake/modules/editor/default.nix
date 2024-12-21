@@ -149,7 +149,6 @@ with lib; {
               end,
             },
           },
-          n
         },
       })
       -- Telescope keys
