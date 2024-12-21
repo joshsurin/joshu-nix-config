@@ -42,6 +42,11 @@ with builtins; let
       pname = name;
       version = "master";
       src = builtins.getAttr name inputs;
+      # Add the preFixup for telescope-fzf-native
+      preFixup = if name == "telescope-fzf-native" then ''
+        echo "Building telescope-fzf-native..."
+        make
+      '' else "";
     };
 
   vimPlugins = {

@@ -23,6 +23,8 @@ in {
       nvim-ts-commentstring
       mini-ai
       prettier
+      copilot-lua
+      copilot-cmp
     ];
 
     vim.luaConfigRC = /* lua */ ''
@@ -124,6 +126,7 @@ in {
           }),
         }),
         sources = cmp.config.sources({
+          { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer", keyword_length = 5 },
@@ -197,6 +200,15 @@ in {
         i = i,
         a = a,
       })
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+        filetypes = {
+          markdown = true,
+          help = true,
+        }
+      })
+      require("copilot_cmp").setup()
     '';
   };
 }

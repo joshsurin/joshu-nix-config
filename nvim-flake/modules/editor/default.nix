@@ -10,6 +10,7 @@ with lib; {
       neo-tree
       nvim-spectre
       telescope
+      telescope-fzf-native
       leap
       gitsigns
       vim-illuminate
@@ -103,6 +104,15 @@ with lib; {
 
       -- Telescope setup
       require("telescope").setup({
+        extensions = {
+          fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+          }
+        },
+
         defaults = {
           prompt_prefix = " ",
           selection_caret = " ",
@@ -139,6 +149,7 @@ with lib; {
               end,
             },
           },
+          n
         },
       })
       -- Telescope keys

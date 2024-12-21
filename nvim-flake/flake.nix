@@ -66,6 +66,18 @@
       url = "github:prettier/vim-prettier";
       flake = false;
     };
+    copilot-lua = {
+      url = "github:zbirenbaum/copilot.lua";
+      flake = false;
+    };
+    copilot-cmp = {
+      url = "github:zbirenbaum/copilot-cmp";
+      flake = false;
+    };
+    dropbar = {
+      url = "github:Bekaboo/dropbar.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # Colorscheme Plugins
@@ -96,6 +108,10 @@
     };
     telescope = {
       url = "github:nvim-telescope/telescope.nvim";
+      flake = false;
+    };
+    telescope-fzf-native = {
+      url = "github:nvim-telescope/telescope-fzf-native.nvim";
       flake = false;
     };
     leap = {
