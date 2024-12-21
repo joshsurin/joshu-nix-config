@@ -1,40 +1,39 @@
-# little hack using $fill to get kubernetes context to the right on the top line
-# format = """
-# $os\
-# $directory\
-# $vcsh\
-# $git_branch\
-# $git_commit\
-# $git_state\
-# $aws\
-# $sudo\
-# $fill\
-# $kubernetes\
-# $line_break\
-# $character"""
-
-# right_format = """$kubernetes"""
-
-# [fill]
-# symbol = ' '
-
 format = """
 [░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
+$os\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
+$git_state\
+$git_metrics\
 [](fg:#394260)\
+$fill\
+[](fg:#394260)\
 $nodejs\
 $rust\
 $golang\
 $php\
+$aws\
+$kubernetes\
+$nix_shell\
+[ ](fg:#394260)\
 \n$character"""
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = ' '
 
 [character]
 success_symbol = '[](bold #03e8fc)'
+
+[cmd_duration]
+min_time = 500
+format = 'underwent [$duration](bold yellow)'
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -56,31 +55,35 @@ format = '[[ $symbol $branch(:$remote_branch) ](fg:#769ff0 bg:#394260)]($style)'
 [git_status]
 style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+modified = '*'
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_metrics]
+disabled = false
+format = '[+$added](fg:#54e2a6 bg:#394260)[/](fg:#769ff0 bg:#394260)[-$deleted](fg:#e36385 bg:#394260)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#394260"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#394260"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#394260"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
 
 [aws]
+style = "fg:#769ff0 bg:#394260"
+symbol = ''
 format = '[$symbol$profile]($style) '
-style = 'bold blue'
-symbol = '🅰 '
 
 [kubernetes]
 disabled = false
@@ -106,3 +109,9 @@ context_pattern = "docker-desktop"
 context_alias = "local"
 style = "bold green"
 
+[nix_shell]
+style = "fg:#769ff0 bg:#394260"
+impure_msg = '[impure shell](fg:#e36385 bg:#394260)'
+pure_msg = '[pure shell](fg:#54e2a6 bg:#394260)'
+unknown_msg = '[unknown shell](fg:#f0d04a bg:#394260)'
+format = '[via ☃️ $state( \($name\))]($style)'

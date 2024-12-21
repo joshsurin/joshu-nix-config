@@ -126,7 +126,7 @@ alias lsa="eza --color=always -hal --icons=always --group-directories-first"
 # Nix/home-manager
 alias rnixwsl="sudo nixos-rebuild switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure"
 alias rnixmac="sudo nixos-rebuild switch --flake '/Users/joshuasurin/s/joshu-nix-config/#joshu-mac' --impure"
-alias hmswsl="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure"
+alias hmswsl="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure --extra-experimental-features nix-command --extra-experimental-features flakes"
 alias hmsmac="home-manager switch --flake '/Users/joshuasurin/s/joshu-nix-config/#joshu-mac' --impure"
 alias nvimz="nvim '/home/joshu/joshu-nix-config/zshrc'"
 
