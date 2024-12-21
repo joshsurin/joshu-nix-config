@@ -128,6 +128,22 @@
         "type": "github"
       }
     },
+    "dashboard-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730526793,
+        "narHash": "sha256-Qi8kmC3U8Tvxh0pWIBtN3DuWJioEGWn7FqQ8lQwauRo=",
+        "owner": "nvimdev",
+        "repo": "dashboard-nvim",
+        "rev": "ae309606940d26d8c9df8b048a6e136b6bbec478",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvimdev",
+        "repo": "dashboard-nvim",
+        "type": "github"
+      }
+    },
     "dressing": {
       "flake": false,
       "locked": {
@@ -949,11 +965,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1734677695,
-        "narHash": "sha256-LE0o/QALAVoC82g88KKgPDpzjk83NBnlp/ZSqdRNB+E=",
+        "lastModified": 1734763921,
+        "narHash": "sha256-+D8P1hYWvsRJOlncXqAgQrFNjeqOoncAQvKawLw1yS8=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "2405274937718d520a40e03df92030dca6b4f0fd",
+        "rev": "2a75d8065cff33216e106b651eb0f58b90375717",
         "type": "github"
       },
       "original": {
@@ -1036,6 +1052,7 @@
         "copilot-cmp": "copilot-cmp",
         "copilot-lua": "copilot-lua",
         "crates-nvim": "crates-nvim",
+        "dashboard-nvim": "dashboard-nvim",
         "dressing": "dressing",
         "dropbar": "dropbar",
         "flake-utils": "flake-utils_2",
@@ -1089,7 +1106,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-460Y5IzJG+TACS3AqPaQanOGfXunK7dnXR/bpjzASbM=",
+        "narHash": "sha256-fzX+6C5x6ttH6Vax3rUSTxNF6jHjcWhbQCdJw4Pdypo=",
         "path": "./nvim-flake",
         "type": "path"
       },

@@ -195,11 +195,25 @@ in {
         i[key] = vim.tbl_extend("force", { name = "Inside " .. name .. " textobject" }, ic)
         a[key] = vim.tbl_extend("force", { name = "Around " .. name .. " textobject" }, ac)
       end
+
+      require("which-key").setup({
+        disable_diagnostics = true,
+        silent = true,
+        ignore_missing = true,
+        show_help = false,
+        triggers = {"<leader>"}
+      })
       require("which-key").register({
-        mode = {"o","x" },
+        mode = {"o","x"},
         i = i,
         a = a,
+      }, {
+        silent = true,
+        noremap = true,
+        mode = {"o", "x"},
+        preset = true
       })
+
       require("copilot").setup({
         suggestion = { enabled = false },
         panel = { enabled = false },

@@ -242,6 +242,10 @@
       url = "github:nvim-tree/nvim-web-devicons";
       flake = false;
     };
+    dashboard-nvim = {
+      url = "github:nvimdev/dashboard-nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # Utility Plugins
