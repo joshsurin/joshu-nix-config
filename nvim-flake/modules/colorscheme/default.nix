@@ -67,7 +67,8 @@ with lib; {
       require("tokyonight").setup({
         style = "night",
         styles = {
-          functions = {}
+          functions = { italic = false },
+          keywords = { italic = false },
         },
         on_colors = function(colors)
           colors.bg = "#15151a"
