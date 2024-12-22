@@ -63,6 +63,25 @@ with lib; {
       -- Enable transparency plugin
       require('transparent').setup()
       map("n", "<leader>ut", "<cmd>TransparentToggle<cr>", { desc = "Toggle Transparency" })
+
+      require("tokyonight").setup({
+        style = "night",
+        styles = {
+          functions = {}
+        },
+        on_colors = function(colors)
+          colors.bg = "#15151a"
+          colors.bg_dark = "#15151a"
+          colors.bg_dark1 = "#15151a"
+          colors.bg_float = "#15151a"
+          colors.bg_popup = "#15151a"
+          colors.bg_sidebar = "#15151a"
+          colors.bg_statusline = "#15151a"
+          colors.bg_highlight = "#171a25"
+        end
+      })
+
+      vim.cmd('colorscheme tokyonight-night')
     '';
   };
 }
