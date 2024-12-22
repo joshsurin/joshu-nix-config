@@ -11,7 +11,6 @@ $git_state\
 $git_metrics\
 [](fg:#394260)\
 $fill\
-[](fg:#394260)\
 $nodejs\
 $rust\
 $golang\
@@ -20,7 +19,6 @@ $aws\
 $kubernetes\
 $nix_shell\
 $time\
-[](fg:#394260)\
 \n $character"""
 
 [line_break]
@@ -52,9 +50,9 @@ success_symbol = '[](bold #03e8fc)'
 [time]
 disabled = false
 style = "fg:#769ff0 bg:#394260"
-format = '[󱑀 $time]($style)'
+format = '[](fg:#394260)[󱑀 $time]($style)[](fg:#394260)'
 use_12hr = true
-time_format = '%e %h |%l:%M:%S %p'
+time_format = '%e %h | %l:%M:%S %p'
 
 [cmd_duration]
 min_time = 500
@@ -93,50 +91,53 @@ format = '[+$added](fg:#54e2a6 bg:#394260)[/](fg:#769ff0 bg:#394260)[-$deleted](
 [nodejs]
 symbol = ""
 style = "fg:#769ff0 bg:#394260"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
+format = '[](fg:#394260)[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)[ ](fg:#394260)'
 
 [rust]
 symbol = ""
 style = "fg:#769ff0 bg:#394260"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
+format = '[](fg:#394260)[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)[ ](fg:#394260)'
 
 [golang]
 symbol = ""
 style = "bg:#394260"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)'
+format = '[](fg:#394260)[[ $symbol ($version) ](fg:#769ff0 bg:#394260)]($style)[ ](fg:#394260)'
 
 [aws]
 style = "fg:#769ff0 bg:#394260"
-symbol = ''
-format = '[$symbol$profile]($style) '
+symbol = ' '
+format = '[](fg:#394260)[$symbol [$profile](bold fg:yellow bg:#394260) ]($style)[ ](fg:#394260)'
+
+[docker_context]
+format = '[](fg:#394260)[   $context](fg:#769ff0 bg:#394260)[ ](fg:#394260)'
 
 [kubernetes]
 disabled = false
-format = '[$context]($style):$namespace'
+format = '[](fg:#394260)[󱃾 [$context]($style):$namespace](fg:#769ff0 bg:#394260)[ ](fg:#394260)'
 [[kubernetes.contexts]]
 context_pattern = "twist-preregulated"
 context_alias = "preregulated"
-style = "bold red"
+style = "bold fg:red bg:#394260"
 [[kubernetes.contexts]]
 context_pattern = "twist-sweeps"
 context_alias = "sweeps"
-style = "bold purple"
+style = "bold fg:purple bg:#394260"
 [[kubernetes.contexts]]
 context_pattern = "twist-staging"
 context_alias = "staging"
-style = "bold yellow"
+style = "bold fg:yellow bg:#394260"
 [[kubernetes.contexts]]
 context_pattern = "twist-dev"
 context_alias = "dev"
-style = "bold yellow"
+style = "bold fg:yellow bg:#394260"
 [[kubernetes.contexts]]
 context_pattern = "docker-desktop"
 context_alias = "local"
-style = "bold green"
+style = "bold fg:green bg:#394260"
 
 [nix_shell]
 style = "fg:#769ff0 bg:#394260"
 impure_msg = '[impure shell](fg:#e36385 bg:#394260)'
 pure_msg = '[pure shell](fg:#54e2a6 bg:#394260)'
 unknown_msg = '[unknown shell](fg:#f0d04a bg:#394260)'
-format = '[via ☃️ $state( \($name\))]($style)'
+format = '[](fg:#394260)[via ☃️ $state( \($name\))]($style)[ ](fg:#394260)'
