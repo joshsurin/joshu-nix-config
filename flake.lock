@@ -1212,6 +1212,7 @@
         "plenary": "plenary",
         "poimandres": "poimandres",
         "prettier": "prettier",
+        "render-markdown": "render-markdown",
         "rust-tools": "rust-tools",
         "smear-cursor": "smear-cursor",
         "telescope": "telescope",
@@ -1228,7 +1229,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-tOzF6CrRBtxSnNwVFJvQB16i9xoxwCQUcXS7dtPBf8g=",
+        "narHash": "sha256-hFrcVGs4z3pXLtCM/7m+hP1BeztOxpVGnpQo4DDToCQ=",
         "path": "./nvim-flake",
         "type": "path"
       },
@@ -1314,6 +1315,22 @@
       "original": {
         "owner": "prettier",
         "repo": "vim-prettier",
+        "type": "github"
+      }
+    },
+    "render-markdown": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734133096,
+        "narHash": "sha256-TghF2jDpngtnnkl/AUNHdHkI/j4Hi8aLdDbjRpcO5vs=",
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "rev": "0022a579ac7355966be5ade77699b88c76b6a549",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
         "type": "github"
       }
     },

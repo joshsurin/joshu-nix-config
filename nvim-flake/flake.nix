@@ -182,6 +182,10 @@
       url = "github:sphamba/smear-cursor.nvim";
       flake = false;
     };
+    render-markdown = {
+      url = "github:MeanderingProgrammer/render-markdown.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # LSP Plugins

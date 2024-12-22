@@ -19,6 +19,7 @@ with lib; {
       toggleterm
       vim-visual-multi
       smear-cursor
+      render-markdown
     ];
 
     vim.configRC = /* vim */ ''
@@ -343,6 +344,7 @@ with lib; {
       -- keys are setup in the basic config section
 
       require("smear_cursor").setup()
+      require("render-markdown").setup()
     '';
   };
 }
