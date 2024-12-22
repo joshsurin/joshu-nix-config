@@ -1213,6 +1213,7 @@
         "poimandres": "poimandres",
         "prettier": "prettier",
         "rust-tools": "rust-tools",
+        "smear-cursor": "smear-cursor",
         "telescope": "telescope",
         "telescope-fzf-native": "telescope-fzf-native",
         "todo-comments": "todo-comments",
@@ -1227,7 +1228,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-FfnMg5ymkKlI/ymRZH31DAzPIjD8a2LvPAS6SykGIds=",
+        "narHash": "sha256-tOzF6CrRBtxSnNwVFJvQB16i9xoxwCQUcXS7dtPBf8g=",
         "path": "./nvim-flake",
         "type": "path"
       },
@@ -1342,6 +1343,22 @@
       "original": {
         "owner": "simrat39",
         "repo": "rust-tools.nvim",
+        "type": "github"
+      }
+    },
+    "smear-cursor": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734679459,
+        "narHash": "sha256-0wRfsv34DkHiLumOSfA0EG7YZOqXnoFmyn72qxvUf0U=",
+        "owner": "sphamba",
+        "repo": "smear-cursor.nvim",
+        "rev": "7240dcc47abcd2468d8ad1c479215301ec6c20cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sphamba",
+        "repo": "smear-cursor.nvim",
         "type": "github"
       }
     },

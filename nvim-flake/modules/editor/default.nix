@@ -18,6 +18,7 @@ with lib; {
       trouble
       toggleterm
       vim-visual-multi
+      smear-cursor
     ];
 
     vim.configRC = /* vim */ ''
@@ -340,6 +341,8 @@ with lib; {
       require("toggleterm").setup{}
       -- Toggleterm keys
       -- keys are setup in the basic config section
+
+      require("smear_cursor").setup()
     '';
   };
 }

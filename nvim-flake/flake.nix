@@ -178,6 +178,10 @@
       url = "github:mg979/vim-visual-multi";
       flake = false;
     };
+    smear-cursor = {
+      url = "github:sphamba/smear-cursor.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # LSP Plugins

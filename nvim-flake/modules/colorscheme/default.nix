@@ -52,11 +52,11 @@ with lib; {
       colorscheme nord
       colorscheme kanagawa
       colorscheme vscode
-      colorscheme tokyonight
       colorscheme everforest
       colorscheme onenord
       colorscheme poimandres
       colorscheme gruvbox-material
+      colorscheme tokyonight-night
     '';
 
     vim.luaConfigRC = /* lua */ ''
