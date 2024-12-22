@@ -1225,11 +1225,12 @@
         "vim-surround": "vim-surround",
         "vim-visual-multi": "vim-visual-multi",
         "vscode": "vscode",
-        "which-key": "which-key"
+        "which-key": "which-key",
+        "zen-mode": "zen-mode"
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-hFrcVGs4z3pXLtCM/7m+hP1BeztOxpVGnpQo4DDToCQ=",
+        "narHash": "sha256-1Ee/khxIHtHAghYilSWgcr2L/hJDr0zu235eH8Kv4sQ=",
         "path": "./nvim-flake",
         "type": "path"
       },
@@ -1620,6 +1621,22 @@
       "original": {
         "owner": "folke",
         "repo": "which-key.nvim",
+        "type": "github"
+      }
+    },
+    "zen-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733909800,
+        "narHash": "sha256-TofQ1o5+LH3/1aoLr90oLbBaXFFtu62SXifH5oyj2/k=",
+        "owner": "folke",
+        "repo": "zen-mode.nvim",
+        "rev": "863f150ca321b3dd8aa1a2b69b5f411a220e144f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "zen-mode.nvim",
         "type": "github"
       }
     }

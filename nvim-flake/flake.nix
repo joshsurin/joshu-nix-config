@@ -186,6 +186,10 @@
       url = "github:MeanderingProgrammer/render-markdown.nvim";
       flake = false;
     };
+    zen-mode = {
+      url = "github:folke/zen-mode.nvim";
+      flake = false;
+    };
 
     #-------------------------------------
     # LSP Plugins

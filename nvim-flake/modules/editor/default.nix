@@ -20,6 +20,7 @@ with lib; {
       vim-visual-multi
       smear-cursor
       render-markdown
+      zen-mode
     ];
 
     vim.configRC = /* vim */ ''
@@ -345,6 +346,21 @@ with lib; {
 
       require("smear_cursor").setup()
       require("render-markdown").setup()
+
+      -- Zen Mode
+      require("zen-mode").setup({
+        window = {
+          width = 1,
+        },
+        plugins = {
+          options = {
+            laststatus = 1,
+            ruler = false,
+            showcmd = false,
+          },
+        },
+      })
+      map("n","<leader>z", "<cmd>ZenMode<cr>", {desc="Toggle Zen Mode"})
     '';
   };
 }
