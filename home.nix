@@ -1,8 +1,8 @@
 { lib, pkgs, nvimFlake, ... } @ args:
 let
   systemType = args.extraSpecialArgs.systemType or "unknown";
-  username = if systemType == "wsl" then "joshu" else "joshuasurin";
-  homeDirectory = if systemType == "wsl" then "/home/joshu" else "/User/joshuasurin";
+  username = if systemType == "mac" then "joshuasurin" else "joshu";
+  homeDirectory = if systemType == "mac" then "/User/joshuasurin" else "/home/joshu";
 in
 {
   imports = [
