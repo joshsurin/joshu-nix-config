@@ -129,6 +129,7 @@ alias rnixmac="sudo nixos-rebuild switch --flake '/Users/joshuasurin/s/joshu-nix
 alias hmswsl="home-manager switch --flake '/home/joshu/joshu-nix-config/#joshu-wsl' --impure --extra-experimental-features nix-command --extra-experimental-features flakes"
 alias hmsmac="home-manager switch --flake '/Users/joshuasurin/s/joshu-nix-config/#joshu-mac' --impure"
 alias nvimz="nvim '/home/joshu/joshu-nix-config/zshrc'"
+alias tmuxstake="tmuxp load ~/s/randtmp/staketmux.yml"
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"

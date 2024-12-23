@@ -34,6 +34,8 @@ in
       fira-code
       fira-code-nerdfont
       gh
+      tmux
+      tmuxp
       nvimFlake.packages.${pkgs.system}.default
 
       # devops stuff
