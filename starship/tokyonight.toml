@@ -113,6 +113,7 @@ format = '[](fg:#394260)[   $context](fg:#769ff0 bg:#394260)[ ](fg:#394
 
 [kubernetes]
 disabled = false
+style = "fg:#54e2a6 bg:#394260"
 format = '[](fg:#394260)[󱃾 [$context]($style):$namespace](fg:#769ff0 bg:#394260)[ ](fg:#394260)'
 [[kubernetes.contexts]]
 context_pattern = "twist-preregulated"
