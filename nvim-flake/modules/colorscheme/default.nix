@@ -79,6 +79,9 @@ with lib; {
           colors.bg_sidebar = "#15151a"
           colors.bg_statusline = "#15151a"
           colors.bg_highlight = "#171a25"
+        end,
+        on_highlights = function(hl, c)
+            hl.CmpSel = { bg = "#282b4a" }
         end
       })
 
