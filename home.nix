@@ -16,6 +16,7 @@ in
 	file = {
 		".zshrc".source = ./zshrc;
 		".config/starship.toml".source = ./starship/tokyonight.toml;
+    ".config/ghostty/config".source = ./ghostty;
 	};
 	packages = with pkgs; [
       # system stuff
