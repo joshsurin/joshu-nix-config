@@ -190,6 +190,10 @@
       url = "github:folke/zen-mode.nvim";
       flake = false;
     };
+    nvim-colorizer = {
+      url = "github:norcalli/nvim-colorizer.lua";
+      flake = false;
+    };
 
     #-------------------------------------
     # LSP Plugins

@@ -21,6 +21,7 @@ with lib; {
       smear-cursor
       render-markdown
       zen-mode
+      nvim-colorizer
     ];
 
     vim.configRC = /* vim */ ''
@@ -361,6 +362,27 @@ with lib; {
         },
       })
       map("n","<leader>z", "<cmd>ZenMode<cr>", {desc="Toggle Zen Mode"})
+
+      -- Colorizer
+      require 'colorizer'.setup {
+        '*',
+        user_default_options = {
+          RGB = true,
+          RRGGBB = true,
+          names = false,
+          rgb_fn = false,
+          hsl_fn = false,
+          css = false,
+          css_fn = false,
+          mode = 'background',
+          custom_patterns = {
+            [".*"] = {
+              regex = "0x[A-Fa-f0-9]{6}"
+            }
+          }
+        },
+      }
+
     '';
   };
 }

@@ -26,6 +26,16 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+# Tmux plugins
+TPM_HOME="~/.tmux/plugins/tpm"
+# Download tpm, if it's not there yet
+if [ ! -d "$TPM_HOME" ]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
+fi
+
+tmux source ~/.tmux.conf
+
 export TERM="xterm-256color"
 
 # Main highlight colors
