@@ -17,7 +17,7 @@ in
 		".zshrc".source = ./zshrc;
 		".config/starship.toml".source = ./starship/tokyonight.toml;
     ".config/ghostty/config".source = ./ghostty;
-		".tmux.conf".source = ./tmux.conf;
+		# ".tmux.conf".source = ./tmux.conf;
 	};
 	packages = with pkgs; [
       # system stuff
@@ -39,6 +39,7 @@ in
       tmux
       tmuxp
       nvimFlake.packages.${pkgs.system}.default
+      bun
 
       # devops stuff
       k9s

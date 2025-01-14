@@ -27,7 +27,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Tmux plugins
-TPM_HOME="~/.tmux/plugins/tpm"
+TPM_HOME="$HOME/.tmux/plugins/tpm"
 # Download tpm, if it's not there yet
 if [ ! -d "$TPM_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
