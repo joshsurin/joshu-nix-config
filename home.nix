@@ -40,6 +40,8 @@ in
       tmuxp
       nvimFlake.packages.${pkgs.system}.default
       bun
+      go
+      air
 
       # devops stuff
       k9s

@@ -815,11 +815,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736085891,
-        "narHash": "sha256-bTl9fcUo767VaSx4Q5kFhwiDpFQhBKna7lNbGsqCQiA=",
+        "lastModified": 1737162735,
+        "narHash": "sha256-5T+HkouTMGaRm0rh3kgD4Z1O7ONKfgjyoPQH5rSyreU=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "ba9b3173b0f642ada42b78fb9dfc37ca82266f6c",
+        "rev": "87131f51f8256952d1a306b5521cedc2dc61aa08",
         "type": "github"
       },
       "original": {
@@ -1514,11 +1514,11 @@
     "tt-schemes": {
       "flake": false,
       "locked": {
-        "lastModified": 1733769397,
-        "narHash": "sha256-PXah6e8PK41T9vONsh9X4AVSO0Nq6OtwN4Hd22GizVo=",
+        "lastModified": 1736888641,
+        "narHash": "sha256-ioUzCnrFr5YsFtsSG+0QecR7/A1YUQPFOUYblGy4CLM=",
         "owner": "tinted-theming",
         "repo": "schemes",
-        "rev": "d5024d07713029d21aa45263e164913a0dfab0b6",
+        "rev": "5c6d92f20e5761e0bfd78ee88cb9fca72189c0cf",
         "type": "github"
       },
       "original": {
