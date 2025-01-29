@@ -40,8 +40,7 @@ in
       tmuxp
       nvimFlake.packages.${pkgs.system}.default
       bun
-      go
-      air
+      direnv
 
       # devops stuff
       k9s
@@ -53,6 +52,8 @@ in
       haskellPackages.haskell-language-server
       haskellPackages.cabal-install
       ghc
+      go
+      air
 
       # yarn
       pnpm

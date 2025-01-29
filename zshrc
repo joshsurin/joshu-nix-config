@@ -117,6 +117,8 @@ eval "$(starship init zsh)"
 # kubectl auto complete
 eval "source <(kubectl completion zsh)"
 
+eval "$(direnv hook zsh)"
+
 # terraform auto complete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
