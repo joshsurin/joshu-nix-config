@@ -116,6 +116,7 @@ eval "$(starship init zsh)"
 
 # kubectl auto complete
 eval "source <(kubectl completion zsh)"
+compdef kubecolor=kubectl
 
 eval "$(direnv hook zsh)"
 
@@ -127,10 +128,10 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 alias cat='bat --color=always'
 alias ls='ls --color'
 alias c='clear'
-alias k="kubectl"
-alias kgp="kubectl get pod"
-alias klp="kubectl logs -f"
-alias kdp="kubectl delete pod"
+alias k="kubecolor"
+alias kgp="kubecolor get pod"
+alias klp="kubecolor logs -f"
+alias kdp="kubecolor delete pod"
 alias code="code-insiders"
 alias ls="eza --color=always --no-filesize --icons=always --group-directories-first --no-time --no-user --no-permissions"
 alias lsa="eza --color=always -hal --icons=always --group-directories-first"
