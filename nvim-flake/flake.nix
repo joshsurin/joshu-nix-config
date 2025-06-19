@@ -334,7 +334,16 @@
         pkgs = import nixpkgs {
           inherit system;
           config = {allowUnfree = true;};
-          overlays = [pluginOverlay neovimOverlay];
+          overlays = [
+            pluginOverlay
+            neovimOverlay
+            (final: prev: {
+              nodePackages = prev.nodePackages // {
+                svelte-language-server = prev.nodePackages.svelte-language-server.override {
+                };
+              };
+            })
+          ];
         };
 
         defaults = {
@@ -349,6 +358,7 @@
                 go = true;
                 python = true;
                 typescript = true;
+                svelte = true;
                 html = true;
                 tailwindcss = true;
                 haskell = true;

@@ -86,6 +86,11 @@ in {
         default = false;
         description = "Enable Ruby LSP Server";
       };
+      svelte = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Enable Svelte LSP Server";
+      };
     };
   };
   config = mkIf cfg.enable {

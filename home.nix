@@ -41,6 +41,7 @@ in
       nvimFlake.packages.${pkgs.system}.default
       bun
       direnv
+      zstd
 
       # devops stuff
       k9s
