@@ -358,7 +358,6 @@
                 go = true;
                 python = true;
                 typescript = true;
-                svelte = true;
                 html = true;
                 tailwindcss = true;
                 haskell = true;
