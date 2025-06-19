@@ -7,6 +7,7 @@ in
   imports = [
     ./theming.nix
   ];
+  nixpkgs.config.allowUnfree = true;
 	programs.home-manager.enable = true;
 	fonts.fontconfig.enable = true;
 	home = {
